@@ -12,5 +12,24 @@ document.querySelector(".open-navbar-icon").addEventListener("click", () => {
 document.querySelector(".close-navbar-icon").addEventListener("click", () => {
   container.classList.remove("change");
 });
+// Defines an array of colors
+const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
+
+// Initializes a variable i with value 0
+let i = 0;
+
+// Loops through each HTML element with the class "nav-link"
+// Assigns a background color from the colors array to each element
+Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
+  item.style.cssText = `background-color: ${colors[i++]}`;
+});
+
+// Loops through each HTML element with the class "navigation-button"
+// Toggles the class "change" on the parent element of the clicked button's parent element
+Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
+  item.onclick = () => {
+    item.parentElement.parentElement.classList.toggle("change");
+  };
+});
 
 
