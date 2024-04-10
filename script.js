@@ -32,7 +32,7 @@ homeLink.addEventListener('click', () => {
   container.classList.remove("change");
 });
 
-// Loops through each HTML element with the class "navigation-button"
+// Loops through each HTML element with the classes "navigation-button"
 // Toggles the class "change" on the parent element of the clicked button's parent element
 Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
   item.onclick = () => {
