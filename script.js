@@ -1,7 +1,7 @@
-// Selects the HTML element with the class "container" and assigns it to the variable container
+// Selects the HTML element with the class "container" and assigns it to the variable containers
 const container = document.querySelector(".container");
 
-// Adds a click event listener to the HTML element with the class "open-navbar-icon"
+// Adds a click event listener to the HTML element with the class "open-navbar-icons"
 // When clicked, it adds the class "change" to the container elements
 document.querySelector(".open-navbar-icon").addEventListener("click", () => {
   container.classList.add("change");
@@ -19,7 +19,7 @@ const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
 let i = 0;
 
 // Loops through each HTML element with the class "nav-links"
-// Assigns a background color from the colors array to each element
+// Assigns a background color from the colors array to each elements
 Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
   item.style.cssText = `background-color: ${colors[i++]}`;
 });
@@ -32,8 +32,8 @@ homeLink.addEventListener('click', () => {
   container.classList.remove("change");
 });
 
-// Loops through each HTML element with the classes "navigation-buttons"
-// Toggles the class "change" on the parent element of the clicked button's parent element
+// Loops through each HTML element with the classes "navigation-button"
+// Toggles the class "change" on the parent element of the clicked button's parent elements
 Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
   item.onclick = () => {
     item.parentElement.parentElement.classList.toggle("change");
