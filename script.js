@@ -18,7 +18,7 @@ const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
 // Initializes a variable i with value 0
 let i = 0;
 
-// Loops through each HTML element with the class "nav-links"
+// Loops through each HTML element with the class "nav-link"
 // Assigns a background color from the colors array to each elements
 Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
   item.style.cssText = `background-color: ${colors[i++]}`;
