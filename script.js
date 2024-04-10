@@ -24,6 +24,14 @@ Array.from(document.querySelectorAll(".nav-link")).forEach(item => {
   item.style.cssText = `background-color: ${colors[i++]}`;
 });
 
+const homeLink = document.querySelector('.nav-list a:first-child');
+homeLink.addEventListener('click', () => {
+  // Redirects to the main page (replace 'index.html' with the name of your main HTML file)
+  window.location.href = 'index.html';
+  // Closes the navbar
+  container.classList.remove("change");
+});
+
 // Loops through each HTML element with the class "navigation-button"
 // Toggles the class "change" on the parent element of the clicked button's parent element
 Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
